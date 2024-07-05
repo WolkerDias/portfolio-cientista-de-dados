@@ -1,0 +1,1258 @@
+
+<!DOCTYPE html>
+
+
+<html lang="pt-BR" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Construção de Portfólio de Ações &#8212; Portfólio de Ciência de Dados</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=2efa9f5e"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'fintechs/analise_de_carteira_de_investimentos/Construção_de_Portfólio_de_Ações';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/icon-machine-learning.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Cálculo do VaR de uma Carteira de Investimentos" href="C%C3%A1lculo_do_VaR_de_uma_Carteira_de_Investimentos.html" />
+    <link rel="prev" title="Fintechs" href="../introducao.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="pt-BR"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Portfólio de Ciência de Dados - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Portfólio de Ciência de Dados - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Wolker Dias - Cientista de Dados
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Projetos de dados</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../agro/introducao.html">Agro</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../introducao.html">Fintechs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Construção de Portfólio de Ações</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C%C3%A1lculo_do_VaR_de_uma_Carteira_de_Investimentos.html">Cálculo do <em>VaR</em> de uma Carteira de Investimentos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../legal_analytics/introducao.html">Legal Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../marketing_digital_e_crm/introducao.html">Marketing Digital e CRM</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../people_analytics/introducao.html">People Analytics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../people_analytics/otimizacao_de_custos_de_plano_de_saude/Otimiza%C3%A7%C3%A3o_de_Custos_de_Plano_de_Sa%C3%BAde.html">Otimização de Custos de Plano de Saúde</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffintechs/analise_de_carteira_de_investimentos/Construção_de_Portfólio_de_Ações.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/fintechs/analise_de_carteira_de_investimentos/Construção_de_Portfólio_de_Ações.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Construção de Portfólio de Ações</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estrategia-para-refletir-as-principais-participacoes-em-setores-do-ibovespa">Estratégia para Refletir as Principais Participações em Setores do Ibovespa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo">Resumo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indice-bovespa-ibovespa-b3">Índice Bovespa (Ibovespa B3)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#descricao-e-coleta-dos-dados">Descrição e coleta dos dados</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-de-selecao">Critérios de Seleção</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ponderacao">Ponderação</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusao">Conclusão</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="construcao-de-portfolio-de-acoes">
+<h1>Construção de Portfólio de Ações<a class="headerlink" href="#construcao-de-portfolio-de-acoes" title="Link to this heading">#</a></h1>
+<section id="estrategia-para-refletir-as-principais-participacoes-em-setores-do-ibovespa">
+<h2>Estratégia para Refletir as Principais Participações em Setores do Ibovespa<a class="headerlink" href="#estrategia-para-refletir-as-principais-participacoes-em-setores-do-ibovespa" title="Link to this heading">#</a></h2>
+</section>
+<section id="resumo">
+<h2>Resumo<a class="headerlink" href="#resumo" title="Link to this heading">#</a></h2>
+<p>Este artigo propõe a criação de uma carteira fictícia como parte integrante de um estudo subsequente de análise de risco de portfólio de ações, composta por 10 ativos diversos. A abordagem adotada consiste na seleção da maior participação em cada setor, com a determinação dos pesos baseada na participação percentual do papel que compõe o índice Bovespa. Para tanto, utilizou-se a tabela “IBOVDia_12–01–24.csv”, que contém dados atualizados do Ibovespa em 12/01/2024, empregando a linguagem de programação Python. Optou-se por esse método visando incorporar as principais ações do mercado brasileiro com o maior número possível de setores para garantir a diversificação na carteira.</p>
+<blockquote>
+<div><p>📌 Nota: Este portfólio de ações será utilizado em estudos futuros para simular a análise de riscos em carteiras de investimentos. A metodologia ou os resultados obtido não devem ser considerados como recomendação de compra ou venda de ativos.</p>
+</div></blockquote>
+</section>
+<section id="indice-bovespa-ibovespa-b3">
+<h2>Índice Bovespa (Ibovespa B3)<a class="headerlink" href="#indice-bovespa-ibovespa-b3" title="Link to this heading">#</a></h2>
+<p>O Ibovespa é uma carteira teórica de ativos composta por ações e units de empresas que atendem a critérios específicos, representando aproximadamente 80% dos negócios e do volume financeiro no mercado de capitais brasileiro. Criado em 1968, o índice tornou-se uma referência global ao longo de 50 anos sendo o principal indicador de desempenho das ações na B3, reunindo as empresas mais importantes do mercado brasileiro.</p>
+</section>
+<section id="descricao-e-coleta-dos-dados">
+<h2>Descrição e coleta dos dados<a class="headerlink" href="#descricao-e-coleta-dos-dados" title="Link to this heading">#</a></h2>
+<p>Importação das bibliotecas que serão utilizadas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lendo os dados da Carteira Teórica do IBovespa:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">csv</span> <span class="o">=</span> <span class="s1">&#39;./data/IBOVDia_12-01-24.csv&#39;</span>
+<span class="n">ibov</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv</span><span class="p">,</span>
+                   <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span>
+                   <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;ISO-8859-1&#39;</span><span class="p">,</span>
+                   <span class="n">skipfooter</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                   <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">,</span>
+                   <span class="n">thousands</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span>
+                   <span class="n">decimal</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span>
+                   <span class="n">header</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                   <span class="n">index_col</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ibov</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Setor</th>
+      <th>Código</th>
+      <th>Ação</th>
+      <th>Tipo</th>
+      <th>Qtde. Teórica</th>
+      <th>Part. (%)</th>
+      <th>Part. (%)Acum.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Bens Indls / Máqs e Equips</td>
+      <td>WEGE3</td>
+      <td>WEG</td>
+      <td>ON      NM</td>
+      <td>1481593024</td>
+      <td>2.316</td>
+      <td>2.316</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Bens Indls / Mat Transporte</td>
+      <td>EMBR3</td>
+      <td>EMBRAER</td>
+      <td>ON      NM</td>
+      <td>734632705</td>
+      <td>0.722</td>
+      <td>0.722</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Bens Indls/Transporte</td>
+      <td>AZUL4</td>
+      <td>AZUL</td>
+      <td>PN      N2</td>
+      <td>327593725</td>
+      <td>0.209</td>
+      <td>2.157</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Bens Indls/Transporte</td>
+      <td>CCRO3</td>
+      <td>CCR SA</td>
+      <td>ON      NM</td>
+      <td>995335937</td>
+      <td>0.613</td>
+      <td>2.157</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Bens Indls/Transporte</td>
+      <td>GOLL4</td>
+      <td>GOL</td>
+      <td>PN      N2</td>
+      <td>198184909</td>
+      <td>0.071</td>
+      <td>2.157</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Primeiramente, é fundamental obtermos uma visão abrangente dos rótulos das colunas, examinarmos os tipos de dados presentes e checarmos se há valores ausentes em nossa base.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ibov</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 87 entries, 0 to 86
+Data columns (total 7 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   Setor           87 non-null     object 
+ 1   Código          87 non-null     object 
+ 2   Ação            87 non-null     object 
+ 3   Tipo            87 non-null     object 
+ 4   Qtde. Teórica   87 non-null     int64  
+ 5   Part. (%)       87 non-null     float64
+ 6   Part. (%)Acum.  87 non-null     float64
+dtypes: float64(2), int64(1), object(4)
+memory usage: 4.9+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para o entendimento dos dados, os metadados da tabela fornecerão informações sobre o significado de cada coluna.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Colunas</span><span class="p">:</span>
+
+<span class="n">Setor</span><span class="p">:</span>          <span class="p">(</span><span class="n">Tipo</span><span class="p">:</span> <span class="n">Texto</span><span class="p">)</span> <span class="o">-</span> <span class="n">O</span> <span class="n">setor</span> <span class="n">e</span> <span class="n">subsetor</span> <span class="n">ao</span> <span class="n">qual</span> <span class="n">a</span> <span class="n">ação</span> <span class="n">pertence</span> <span class="p">(</span><span class="n">separados</span> <span class="n">por</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span><span class="o">.</span>
+<span class="n">Código</span><span class="p">:</span>         <span class="p">(</span><span class="n">Tipo</span><span class="p">:</span> <span class="n">Texto</span><span class="p">)</span> <span class="o">-</span> <span class="n">O</span> <span class="n">código</span> <span class="n">identificador</span> <span class="n">único</span> <span class="n">usado</span> <span class="n">na</span> <span class="n">bolsa</span> <span class="n">de</span> <span class="n">valores</span> <span class="p">(</span><span class="n">B3</span><span class="p">)</span> <span class="n">para</span> <span class="n">identificar</span> <span class="n">e</span> <span class="n">negociar</span> <span class="n">um</span> <span class="n">determinado</span> <span class="n">ativo</span><span class="o">.</span>
+<span class="n">Ação</span><span class="p">:</span>           <span class="p">(</span><span class="n">Tipo</span><span class="p">:</span> <span class="n">Texto</span><span class="p">)</span> <span class="o">-</span> <span class="n">O</span> <span class="n">nome</span> <span class="n">da</span> <span class="n">ação</span><span class="o">.</span>
+<span class="n">Tipo</span><span class="p">:</span>           <span class="p">(</span><span class="n">Tipo</span><span class="p">:</span> <span class="n">Texto</span><span class="p">)</span> <span class="o">-</span> <span class="n">O</span> <span class="n">tipo</span> <span class="n">de</span> <span class="n">ação</span> <span class="n">seguido</span> <span class="n">pelo</span> <span class="n">Nivel</span> <span class="n">de</span> <span class="n">Governança</span> <span class="p">(</span><span class="n">separados</span> <span class="n">por</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span>
+<span class="n">Qtde</span><span class="o">.</span> <span class="n">Teórica</span><span class="p">:</span>  <span class="p">(</span><span class="n">Tipo</span><span class="p">:</span> <span class="n">Numérico</span><span class="p">)</span> <span class="o">-</span> <span class="n">A</span> <span class="n">quantidade</span> <span class="n">teórica</span> <span class="n">de</span> <span class="n">ações</span> <span class="n">no</span> <span class="n">índice</span> <span class="n">Bovespa</span><span class="o">.</span>
+<span class="n">Part</span><span class="o">.</span> <span class="p">(</span><span class="o">%</span><span class="p">):</span>      <span class="p">(</span><span class="n">Tipo</span><span class="p">:</span> <span class="n">Numérico</span><span class="p">)</span> <span class="o">-</span> <span class="n">A</span> <span class="n">participação</span> <span class="n">percentual</span> <span class="n">da</span> <span class="n">ação</span> <span class="n">no</span> <span class="n">índice</span> <span class="n">Bovespa</span><span class="o">.</span>
+<span class="n">Part</span><span class="o">.</span> <span class="p">(</span><span class="o">%</span><span class="p">)</span><span class="n">Acum</span><span class="o">.</span><span class="p">:</span> <span class="p">(</span><span class="n">Tipo</span><span class="p">:</span> <span class="n">Numérico</span><span class="p">)</span> <span class="o">-</span> <span class="n">A</span> <span class="n">participação</span> <span class="n">percentual</span> <span class="n">do</span> <span class="n">Setor</span> <span class="o">/</span> <span class="n">SubSetor</span> <span class="n">da</span> <span class="n">ação</span> <span class="n">no</span> <span class="n">índice</span> <span class="n">Bovespa</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Conforme observado nos metadados, a coluna “Setor” apresenta o setor e subsetor da ação separados por “/”. Podemos identificá-los utilizando a função <code class="docutils literal notranslate"><span class="pre">unique()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ibov</span><span class="p">[</span><span class="s1">&#39;Setor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Bens Indls / Máqs e Equips&#39;, &#39;Bens Indls / Mat Transporte&#39;,
+       &#39;Bens Indls/Transporte&#39;, &#39;Cons N  Básico / Alimentos Processados&#39;,
+       &#39;Cons N Cíclico / Bebidas&#39;, &#39;Cons N Cíclico / Comércio Distr.&#39;,
+       &#39;Cons N Cíclico / Pr Pessoal Limp&#39;, &#39;Cons N Ciclico/Agropecuária&#39;,
+       &#39;Consumo Cíclico / Comércio&#39;, &#39;Consumo Cíclico / Tecid Vest Calç&#39;,
+       &#39;Consumo Cíclico/Constr Civil&#39;, &#39;Consumo Cíclico/Viagens e Lazer&#39;,
+       &#39;Diversos&#39;, &#39;Financ e Outros / Explor Imóveis&#39;,
+       &#39;Financ e Outros / Holdings Divers&#39;,
+       &#39;Financ e Outros / Interms Financs&#39;,
+       &#39;Financ e Outros / Previd  Seguros&#39;,
+       &#39;Financeiro e Outros/Serviços Financeiros Diversos&#39;,
+       &#39;Mats Básicos / Madeira e Papel&#39;, &#39;Mats Básicos / Mineração&#39;,
+       &#39;Mats Básicos / Químicos&#39;, &#39;Mats Básicos / Sid Metalurgia&#39;,
+       &#39;Petróleo/ Gás e Biocombustíveis&#39;, &#39;Saúde/Comércio Distr.&#39;,
+       &#39;Saúde/SM Hosp An.Diag&#39;, &#39;Tec.Informação/Programas Servs&#39;,
+       &#39;Telecomunicação&#39;, &#39;Utilidade Públ / Água Saneamento&#39;,
+       &#39;Utilidade Públ / Energ Elétrica&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vamos separar os dados desta coluna em “Setor” e “Subsetor”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Separando os dados antes e depois da &quot;/&quot;.</span>
+<span class="c1"># O parâmetro &#39;expand=True&#39; retorna os dados em colunas separadas.</span>
+<span class="n">ibov</span><span class="p">[[</span><span class="s1">&#39;Setor&#39;</span><span class="p">,</span> <span class="s1">&#39;Subsetor&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">ibov</span><span class="p">[</span><span class="s1">&#39;Setor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Removendo os espaços extras ao redor das strings</span>
+<span class="n">ibov</span><span class="p">[</span><span class="s1">&#39;Setor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ibov</span><span class="p">[</span><span class="s1">&#39;Setor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="n">ibov</span><span class="p">[</span><span class="s1">&#39;Subsetor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ibov</span><span class="p">[</span><span class="s1">&#39;Subsetor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Agora, as informações de Setor e Subsetor das ações estão separadas em colunas distintas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ibov</span><span class="p">[</span><span class="s1">&#39;Setor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Bens Indls&#39;, &#39;Cons N  Básico&#39;, &#39;Cons N Cíclico&#39;, &#39;Cons N Ciclico&#39;,
+       &#39;Consumo Cíclico&#39;, &#39;Diversos&#39;, &#39;Financ e Outros&#39;,
+       &#39;Financeiro e Outros&#39;, &#39;Mats Básicos&#39;, &#39;Petróleo&#39;, &#39;Saúde&#39;,
+       &#39;Tec.Informação&#39;, &#39;Telecomunicação&#39;, &#39;Utilidade Públ&#39;],
+      dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ibov</span><span class="p">[</span><span class="s1">&#39;Subsetor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Máqs e Equips&#39;, &#39;Mat Transporte&#39;, &#39;Transporte&#39;,
+       &#39;Alimentos Processados&#39;, &#39;Bebidas&#39;, &#39;Comércio Distr.&#39;,
+       &#39;Pr Pessoal Limp&#39;, &#39;Agropecuária&#39;, &#39;Comércio&#39;, &#39;Tecid Vest Calç&#39;,
+       &#39;Constr Civil&#39;, &#39;Viagens e Lazer&#39;, None, &#39;Explor Imóveis&#39;,
+       &#39;Holdings Divers&#39;, &#39;Interms Financs&#39;, &#39;Previd  Seguros&#39;,
+       &#39;Serviços Financeiros Diversos&#39;, &#39;Madeira e Papel&#39;, &#39;Mineração&#39;,
+       &#39;Químicos&#39;, &#39;Sid Metalurgia&#39;, &#39;Gás e Biocombustíveis&#39;,
+       &#39;SM Hosp An.Diag&#39;, &#39;Programas Servs&#39;, &#39;Água Saneamento&#39;,
+       &#39;Energ Elétrica&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Novamente, iremos verificar se as novas colunas possuem dados faltantes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ibov</span><span class="p">[[</span><span class="s1">&#39;Setor&#39;</span><span class="p">,</span> <span class="s1">&#39;Subsetor&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 87 entries, 0 to 86
+Data columns (total 2 columns):
+ #   Column    Non-Null Count  Dtype 
+---  ------    --------------  ----- 
+ 0   Setor     87 non-null     object
+ 1   Subsetor  81 non-null     object
+dtypes: object(2)
+memory usage: 1.5+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<p>Observa-se que existem 6 linhas com valores nulos na coluna “Subsetor”. Podemos identificá-las utilizando o método <code class="docutils literal notranslate"><span class="pre">.isna()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ibov</span><span class="p">[</span><span class="n">ibov</span><span class="p">[</span><span class="s1">&#39;Subsetor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Setor</th>
+      <th>Código</th>
+      <th>Ação</th>
+      <th>Tipo</th>
+      <th>Qtde. Teórica</th>
+      <th>Part. (%)</th>
+      <th>Part. (%)Acum.</th>
+      <th>Subsetor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>28</th>
+      <td>Diversos</td>
+      <td>COGN3</td>
+      <td>COGNA ON</td>
+      <td>ON      NM</td>
+      <td>1814920980</td>
+      <td>0.269</td>
+      <td>3.056</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Diversos</td>
+      <td>RENT3</td>
+      <td>LOCALIZA</td>
+      <td>ON      NM</td>
+      <td>853202347</td>
+      <td>2.337</td>
+      <td>3.056</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Diversos</td>
+      <td>VAMO3</td>
+      <td>VAMOS</td>
+      <td>ON      NM</td>
+      <td>421383330</td>
+      <td>0.180</td>
+      <td>3.056</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Diversos</td>
+      <td>YDUQ3</td>
+      <td>YDUQS PART</td>
+      <td>ON      NM</td>
+      <td>289347914</td>
+      <td>0.270</td>
+      <td>3.056</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>Telecomunicação</td>
+      <td>VIVT3</td>
+      <td>TELEF BRASIL</td>
+      <td>ON</td>
+      <td>423091712</td>
+      <td>0.956</td>
+      <td>1.574</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>Telecomunicação</td>
+      <td>TIMS3</td>
+      <td>TIM</td>
+      <td>ON      NM</td>
+      <td>807896814</td>
+      <td>0.618</td>
+      <td>1.574</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Substituiremos os dados faltantes do Subsetor pelos mesmos do Setor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ibov</span><span class="p">[</span><span class="s1">&#39;Subsetor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ibov</span><span class="p">[</span><span class="s1">&#39;Subsetor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">ibov</span><span class="p">[</span><span class="s1">&#39;Setor&#39;</span><span class="p">])</span>
+<span class="n">ibov</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 87 entries, 0 to 86
+Data columns (total 8 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   Setor           87 non-null     object 
+ 1   Código          87 non-null     object 
+ 2   Ação            87 non-null     object 
+ 3   Tipo            87 non-null     object 
+ 4   Qtde. Teórica   87 non-null     int64  
+ 5   Part. (%)       87 non-null     float64
+ 6   Part. (%)Acum.  87 non-null     float64
+ 7   Subsetor        87 non-null     object 
+dtypes: float64(2), int64(1), object(5)
+memory usage: 5.6+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<p>Entendemos que alguns setores podem ser agrupados. Portanto, vamos consolidá-los para formar 10 setores distintos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">agrupa_setor</span><span class="p">(</span><span class="n">setor</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">setor</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Cons N  Básico&#39;</span><span class="p">,</span> <span class="s1">&#39;Cons N Cíclico&#39;</span><span class="p">,</span> <span class="s1">&#39;Cons N Ciclico&#39;</span><span class="p">]:</span> <span class="k">return</span> <span class="s2">&quot;Consumo Não-Cíclico&quot;</span>
+  <span class="k">if</span> <span class="n">setor</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Financ e Outros&#39;</span><span class="p">,</span> <span class="s1">&#39;Financeiro e Outros&#39;</span><span class="p">]:</span> <span class="k">return</span> <span class="s2">&quot;Financeiro&quot;</span>
+  <span class="k">if</span> <span class="n">setor</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Tec.Informação&#39;</span><span class="p">,</span> <span class="s1">&#39;Telecomunicação&#39;</span><span class="p">]:</span> <span class="k">return</span> <span class="s2">&quot;TI e Telecom&quot;</span>
+  <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="n">setor</span>
+
+<span class="n">ibov</span><span class="p">[</span><span class="s1">&#39;Setor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ibov</span><span class="p">[</span><span class="s1">&#39;Setor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">agrupa_setor</span><span class="p">)</span>
+<span class="n">ibov</span><span class="p">[</span><span class="s1">&#39;Setor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Bens Indls&#39;, &#39;Consumo Não-Cíclico&#39;, &#39;Consumo Cíclico&#39;, &#39;Diversos&#39;,
+       &#39;Financeiro&#39;, &#39;Mats Básicos&#39;, &#39;Petróleo&#39;, &#39;Saúde&#39;, &#39;TI e Telecom&#39;,
+       &#39;Utilidade Públ&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="criterios-de-selecao">
+<h2>Critérios de Seleção<a class="headerlink" href="#criterios-de-selecao" title="Link to this heading">#</a></h2>
+<p>As ações escolhidas serão aquelas que ocupam a maior participação em cada setor. Para isso, ordenou-se as ações por participação na ordem decrescente e selecionou-se a primeira de cada setor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ordenando as ações por participação na ordem decrescente e selecionando a primeira de cada setor.</span>
+<span class="n">Carteira</span> <span class="o">=</span> <span class="n">ibov</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Part. (%)&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Setor&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">Carteira</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Setor</th>
+      <th>Código</th>
+      <th>Ação</th>
+      <th>Tipo</th>
+      <th>Qtde. Teórica</th>
+      <th>Part. (%)</th>
+      <th>Part. (%)Acum.</th>
+      <th>Subsetor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>51</th>
+      <td>Mats Básicos</td>
+      <td>VALE3</td>
+      <td>VALE</td>
+      <td>ON      NM</td>
+      <td>4196924316</td>
+      <td>13.681</td>
+      <td>14.311</td>
+      <td>Mineração</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>Petróleo</td>
+      <td>PETR4</td>
+      <td>PETROBRAS</td>
+      <td>PN      N2</td>
+      <td>4566445852</td>
+      <td>7.805</td>
+      <td>17.879</td>
+      <td>Gás e Biocombustíveis</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>Financeiro</td>
+      <td>ITUB4</td>
+      <td>ITAUUNIBANCO</td>
+      <td>PN      N1</td>
+      <td>4801593832</td>
+      <td>7.189</td>
+      <td>17.747</td>
+      <td>Interms Financs</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>Utilidade Públ</td>
+      <td>ELET3</td>
+      <td>ELETROBRAS</td>
+      <td>ON      N1</td>
+      <td>1980568384</td>
+      <td>3.843</td>
+      <td>10.954</td>
+      <td>Energ Elétrica</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Consumo Não-Cíclico</td>
+      <td>ABEV3</td>
+      <td>AMBEV S/A</td>
+      <td>ON</td>
+      <td>4394245879</td>
+      <td>2.675</td>
+      <td>2.675</td>
+      <td>Bebidas</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Diversos</td>
+      <td>RENT3</td>
+      <td>LOCALIZA</td>
+      <td>ON      NM</td>
+      <td>853202347</td>
+      <td>2.337</td>
+      <td>3.056</td>
+      <td>Diversos</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Bens Indls</td>
+      <td>WEGE3</td>
+      <td>WEG</td>
+      <td>ON      NM</td>
+      <td>1481593024</td>
+      <td>2.316</td>
+      <td>2.316</td>
+      <td>Máqs e Equips</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>Saúde</td>
+      <td>RADL3</td>
+      <td>RAIADROGASIL</td>
+      <td>ON      NM</td>
+      <td>1275798515</td>
+      <td>1.614</td>
+      <td>2.248</td>
+      <td>Comércio Distr.</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>TI e Telecom</td>
+      <td>VIVT3</td>
+      <td>TELEF BRASIL</td>
+      <td>ON</td>
+      <td>423091712</td>
+      <td>0.956</td>
+      <td>1.574</td>
+      <td>Telecomunicação</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Consumo Cíclico</td>
+      <td>LREN3</td>
+      <td>LOJAS RENNER</td>
+      <td>ON      NM</td>
+      <td>951329770</td>
+      <td>0.703</td>
+      <td>1.431</td>
+      <td>Comércio</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="ponderacao">
+<h2>Ponderação<a class="headerlink" href="#ponderacao" title="Link to this heading">#</a></h2>
+<p>Determinou-se os pesos das ação pela sua participação no Ibovespa. Ao adotar essa abordagem de ponderação, buscou-se assegurar que a composição da carteira reflita não apenas a posição no setor, mas também a influência da ação no índice como um indicador mais abrangente do mercado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Distribuindo os pesos na carteira</span>
+<span class="n">Carteira</span><span class="p">[</span><span class="s1">&#39;Peso&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Carteira</span><span class="p">[</span><span class="s1">&#39;Part. (%)&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">Carteira</span><span class="p">[</span><span class="s1">&#39;Part. (%)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Selecionando somente as colunas necessárias.</span>
+<span class="n">Carteira</span> <span class="o">=</span> <span class="n">Carteira</span><span class="p">[[</span><span class="s1">&#39;Código&#39;</span><span class="p">,</span> <span class="s1">&#39;Ação&#39;</span><span class="p">,</span> <span class="s1">&#39;Peso&#39;</span><span class="p">,</span> <span class="s1">&#39;Setor&#39;</span><span class="p">,</span> <span class="s1">&#39;Subsetor&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">Carteira</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Código</th>
+      <th>Ação</th>
+      <th>Peso</th>
+      <th>Setor</th>
+      <th>Subsetor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>VALE3</td>
+      <td>VALE</td>
+      <td>0.317285</td>
+      <td>Mats Básicos</td>
+      <td>Mineração</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>PETR4</td>
+      <td>PETROBRAS</td>
+      <td>0.181011</td>
+      <td>Petróleo</td>
+      <td>Gás e Biocombustíveis</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ITUB4</td>
+      <td>ITAUUNIBANCO</td>
+      <td>0.166725</td>
+      <td>Financeiro</td>
+      <td>Interms Financs</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ELET3</td>
+      <td>ELETROBRAS</td>
+      <td>0.089125</td>
+      <td>Utilidade Públ</td>
+      <td>Energ Elétrica</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ABEV3</td>
+      <td>AMBEV S/A</td>
+      <td>0.062038</td>
+      <td>Consumo Não-Cíclico</td>
+      <td>Bebidas</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>RENT3</td>
+      <td>LOCALIZA</td>
+      <td>0.054199</td>
+      <td>Diversos</td>
+      <td>Diversos</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>WEGE3</td>
+      <td>WEG</td>
+      <td>0.053712</td>
+      <td>Bens Indls</td>
+      <td>Máqs e Equips</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>RADL3</td>
+      <td>RAIADROGASIL</td>
+      <td>0.037431</td>
+      <td>Saúde</td>
+      <td>Comércio Distr.</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>VIVT3</td>
+      <td>TELEF BRASIL</td>
+      <td>0.022171</td>
+      <td>TI e Telecom</td>
+      <td>Telecomunicação</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>LREN3</td>
+      <td>LOJAS RENNER</td>
+      <td>0.016304</td>
+      <td>Consumo Cíclico</td>
+      <td>Comércio</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Salvando os dados da carteira em formato .xlsx com pandas</span>
+<span class="n">Carteira</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">&#39;./data/carteira.xlsx&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusao">
+<h2>Conclusão<a class="headerlink" href="#conclusao" title="Link to this heading">#</a></h2>
+<p>Por fim, temos uma carteira que tenta refletir as principais posições nos setores do Ibovespa, com pesos proporcionais à participação de cada ação no índice e contando com informações sobre o setor, subsetor e nome da ação, os quais serão utilizadas em análises futuras.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./fintechs\analise_de_carteira_de_investimentos"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../introducao.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Fintechs</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="C%C3%A1lculo_do_VaR_de_uma_Carteira_de_Investimentos.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Cálculo do <em>VaR</em> de uma Carteira de Investimentos</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estrategia-para-refletir-as-principais-participacoes-em-setores-do-ibovespa">Estratégia para Refletir as Principais Participações em Setores do Ibovespa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo">Resumo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indice-bovespa-ibovespa-b3">Índice Bovespa (Ibovespa B3)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#descricao-e-coleta-dos-dados">Descrição e coleta dos dados</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-de-selecao">Critérios de Seleção</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ponderacao">Ponderação</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusao">Conclusão</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Wolker Sanches Dias
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

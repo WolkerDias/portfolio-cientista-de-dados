@@ -1,0 +1,66 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Portfólio de Ciência de Dados
+author: Wolker Sanches Dias
+email: wolker.sd@hotmail.com
+logo: imagens/logo.png
+copyright: "2024"
+description: >- # this means to ignore newlines until "baseurl:"
+  Este é um examplo de livro construído com Jupyter Books.
+
+
+# Links para redes sociais (opcional)
+social:
+
+- type: "linkedin"
+  url: "https://www.linkedin.com/in/wolkerdias/"
+
+- type: "github"
+  url: "https://github.com/wolkerdias/"
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+  stderr_output: "remove-warn"
+  timeout: 120
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+#bibtex_bibfiles:
+#  - references.bib
+
+# add require.js para que os gráficos plotly sejam exibidos
+sphinx:
+  config:
+    html_js_files:
+    - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+    
+    # Configurações de idioma
+    language: pt-BR
+    
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
+  path_to_book: docs  # Optional path to your book, relative to the repository root
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  toc:
+    maxdepth: 5
+    
+  favicon: imagens/icon-machine-learning.svg
+  use_issues_button: true
+  use_repository_button: true
+  home_page_in_navbar       : true
+
+  analytics:
+    google_analytics_id       : "G-XXXXXXXXXX"  # A GA id that can be used to track book views.  

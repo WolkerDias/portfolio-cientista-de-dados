@@ -1,0 +1,21 @@
+format: jb-book
+root: intro
+
+parts:
+
+  - caption: Projetos de dados
+    chapters:
+      - file: agro/introducao
+
+      - file: fintechs/introducao
+        sections:
+          - file: fintechs/analise_de_carteira_de_investimentos/Construção_de_Portfólio_de_Ações
+          - file: fintechs/analise_de_carteira_de_investimentos/Cálculo_do_VaR_de_uma_Carteira_de_Investimentos
+
+      - file: legal_analytics/introducao
+
+      - file: marketing_digital_e_crm/introducao
+
+      - file: people_analytics/introducao
+        sections:
+          - file: people_analytics/otimizacao_de_custos_de_plano_de_saude/Otimização_de_Custos_de_Plano_de_Saúde
