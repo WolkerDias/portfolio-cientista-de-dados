@@ -1,3 +1,7 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "cSpell.language": "en,pt-BR",
+    "cSpell.ignoreWords": [
+        "scatterplot"
+    ]
 }

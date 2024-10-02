@@ -5,16 +5,19 @@ parts:
 
   - caption: Projetos de dados
     chapters:
-      - file: agro/introducao
+#      - file: agro/introducao
 
       - file: fintechs/introducao
         sections:
           - file: fintechs/analise_de_carteira_de_investimentos/Construção_de_Portfólio_de_Ações
           - file: fintechs/analise_de_carteira_de_investimentos/Cálculo_do_VaR_de_uma_Carteira_de_Investimentos
 
-      - file: legal_analytics/introducao
+#      - file: legal_analytics/introducao
 
       - file: marketing_digital_e_crm/introducao
+        sections:
+          - file: marketing_digital_e_crm/churn_de_clientes/Minimizando_o_Churn_de_Clientes_com_Machine_Learning
+          - file: marketing_digital_e_crm/churn_de_clientes/Dashboard_de_Acompanhamento_do_Churn
 
       - file: people_analytics/introducao
         sections:
