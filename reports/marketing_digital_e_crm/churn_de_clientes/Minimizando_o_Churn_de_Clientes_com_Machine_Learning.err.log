@@ -1,0 +1,74 @@
+Traceback (most recent call last):
+  File "C:\Users\wolke\AppData\Local\Programs\Python\Python311\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\wolke\AppData\Local\Programs\Python\Python311\Lib\site-packages\nbclient\client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolke\AppData\Local\Programs\Python\Python311\Lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wolke\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\wolke\AppData\Local\Programs\Python\Python311\Lib\site-packages\nbclient\client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\wolke\AppData\Local\Programs\Python\Python311\Lib\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\wolke\AppData\Local\Programs\Python\Python311\Lib\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Criando o DataFrame a partir dos resultados do trials
+df_trials = pd.DataFrame(trials.results)
+df_trials.rename(columns={'loss': 'Distância'}, inplace=True)
+
+# Encontrando o ponto com a menor distância
+min_dist_point = df_trials.loc[df_trials['Distância'].idxmin()]
+
+# Definindo os valores mínimo e máximo de distância para ajustar a barra de cores
+vmin = df_trials['Distância'].min()
+vmax = df_trials['Distância'].max()
+
+# Criando a figura e os eixos para o gráfico e a barra de cores
+fig, ax = plt.subplots(figsize=(15, 6))
+
+# Plotando o gráfico de dispersão
+scatter_plot = sns.scatterplot(data=df_trials, x='Recall', y='Variação', hue='Distância', palette='viridis', ax=ax, s=100, alpha=0.7, legend=False)
+
+# Adicionando o ponto ótimo (1, 0)
+ax.scatter(1, 0, color='red', s=100, label='Ponto Ótimo\n(Maior Recall e menor variação possível)')
+
+# Adicionando a linha para a menor distância
+ax.plot([1, min_dist_point['Recall']], [0, min_dist_point['Variação']], 'k--', alpha=0.3)  # Linha preta pontilhada
+mid_x = (1 + min_dist_point['Recall']) / 2
+mid_y = (0 + min_dist_point['Variação']) / 2
+ax.text(mid_x, mid_y, f'Menor distância {min_dist_point["Distância"]:.3f}', fontsize=9, color='black', ha='center')
+
+# Ajustando os rótulos e título
+ax.set_xlabel('Recall Médio em Teste')
+ax.set_ylabel('Variação Média entre Treino e Teste')
+ax.set_title('Dispersão de Recall e Variação Média com a Menor Distância Euclidiana até o Ponto Ótimo', fontsize=11)
+
+# Adicionando a barra de cores com os limites ajustados
+norm = plt.Normalize(vmin=vmin, vmax=vmax)
+sm = plt.cm.ScalarMappable(cmap='viridis', norm=norm)
+sm.set_array([])
+cbar = plt.colorbar(sm, ax=ax, label='Distância ao Ponto Ótimo')
+
+# Adicionando a legenda
+ax.legend(fontsize=9)
+
+plt.show()
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mNameError[0m                                 Traceback (most recent call last)
+Cell [1;32mIn[52], line 2[0m
+[0;32m      1[0m [38;5;66;03m# Criando o DataFrame a partir dos resultados do trials[39;00m
+[1;32m----> 2[0m df_trials [38;5;241m=[39m pd[38;5;241m.[39mDataFrame([43mtrials[49m[38;5;241m.[39mresults)
+[0;32m      3[0m df_trials[38;5;241m.[39mrename(columns[38;5;241m=[39m{[38;5;124m'[39m[38;5;124mloss[39m[38;5;124m'[39m: [38;5;124m'[39m[38;5;124mDistância[39m[38;5;124m'[39m}, inplace[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
+[0;32m      5[0m [38;5;66;03m# Encontrando o ponto com a menor distância[39;00m
+
+[1;31mNameError[0m: name 'trials' is not defined
+

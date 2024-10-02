@@ -22,7 +22,7 @@
 <link href="../../_static/styles/sphinx-book-theme.css?v=384b581d" rel="stylesheet" type="text/css"/>
 <link href="../../_static/togglebutton.css?v=13237357" rel="stylesheet" type="text/css"/>
 <link href="../../_static/copybutton.css?v=76b2166b" rel="stylesheet" type="text/css"/>
-<link href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" rel="stylesheet" type="text/css"/>
 <link href="../../_static/sphinx-thebe.css?v=4fa983c6" rel="stylesheet" type="text/css"/>
 <link href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" rel="stylesheet" type="text/css"/>
 <!-- Pre-loaded scripts that we'll load fully later -->
@@ -46,7 +46,7 @@
 <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
 <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
 <script>DOCUMENTATION_OPTIONS.pagename = 'fintechs/analise_de_carteira_de_investimentos/Construção_de_Portfólio_de_Ações';</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.7/require.min.js"></script>
 <link href="/fintechs/analise_de_carteira_de_investimentos/Construção_de_Portfólio_de_Ações.html" rel="canonical"/>
 <link href="../../_static/icon-machine-learning.svg" rel="icon"/>
 <link href="../../genindex.html" rel="index" title="Index"/>
@@ -119,15 +119,17 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Projetos de dados</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../agro/introducao.html">Agro</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../introducao.html">Fintechs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../introducao.html"><em>Fintechs</em></a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Construção de Portfólio de Ações</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C%C3%A1lculo_do_VaR_de_uma_Carteira_de_Investimentos.html">Cálculo do <em>VaR</em> de uma Carteira de Investimentos</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../legal_analytics/introducao.html">Legal Analytics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../marketing_digital_e_crm/introducao.html">Marketing Digital e CRM</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../people_analytics/introducao.html">People Analytics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../marketing_digital_e_crm/introducao.html">Marketing Digital e CRM</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../marketing_digital_e_crm/churn_de_clientes/Minimizando_o_Churn_de_Clientes_com_Machine_Learning.html">Minimizando o <em>Churn</em> de Clientes com <em>Machine Learning</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../marketing_digital_e_crm/churn_de_clientes/Dashboard_de_Acompanhamento_do_Churn.html"><em>Dashboard</em> de Monitoramento das Estratégias de Retenção de Clientes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../people_analytics/introducao.html">People Analytics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../people_analytics/otimizacao_de_custos_de_plano_de_saude/Otimiza%C3%A7%C3%A3o_de_Custos_de_Plano_de_Sa%C3%BAde.html">Otimização de Custos de Plano de Saúde</a></li>
 </ul>
 </li>
@@ -255,7 +257,7 @@ document.write(`
 </section>
 <section id="resumo">
 <h2>Resumo<a class="headerlink" href="#resumo" title="Link to this heading">#</a></h2>
-<p>Este artigo propõe a criação de uma carteira fictícia como parte integrante de um estudo subsequente de análise de risco de portfólio de ações, composta por 10 ativos diversos. A abordagem adotada consiste na seleção da maior participação em cada setor, com a determinação dos pesos baseada na participação percentual do papel que compõe o índice Bovespa. Para tanto, utilizou-se a tabela “IBOVDia_12–01–24.csv”, que contém dados atualizados do Ibovespa em 12/01/2024, empregando a linguagem de programação Python. Optou-se por esse método visando incorporar as principais ações do mercado brasileiro com o maior número possível de setores para garantir a diversificação na carteira.</p>
+<p>Este artigo propõe a criação de uma carteira fictícia como parte integrante de um estudo subsequente de análise de risco de portfólio de ações, composta por 10 ativos diversos. A abordagem adotada consiste na seleção da maior participação em cada setor, com a determinação dos pesos baseada na participação percentual do papel que compõe o índice Bovespa. Para tanto, utilizou-se a tabela <a class="reference download internal" download="" href="../../_downloads/7d9cabba7538ee838c24a858ae9c531f/IBOVDia_12-01-24.csv"><span class="xref download myst"><download>IBOVDia_12-01-24.csv</download></span></a>, que contém dados atualizados do Ibovespa em 12/01/2024, empregando a linguagem de programação Python. Optou-se por esse método visando incorporar as principais ações do mercado brasileiro com o maior número possível de setores para garantir a diversificação na carteira.</p>
 <blockquote>
 <div><p>📌 Nota: Este portfólio de ações será utilizado em estudos futuros para simular a análise de riscos em carteiras de investimentos. A metodologia ou os resultados obtido não devem ser considerados como recomendação de compra ou venda de ativos.</p>
 </div></blockquote>
@@ -969,7 +971,7 @@ memory usage: 5.6+ KB
 </section>
 <section id="conclusao">
 <h2>Conclusão<a class="headerlink" href="#conclusao" title="Link to this heading">#</a></h2>
-<p>Por fim, temos uma carteira que tenta refletir as principais posições nos setores do Ibovespa, com pesos proporcionais à participação de cada ação no índice e contando com informações sobre o setor, subsetor e nome da ação, os quais serão utilizadas em análises futuras.</p>
+<p>Por fim, temos uma carteira que tenta refletir as principais posições nos setores do Ibovespa na data 12-01-2024, com pesos proporcionais à participação de cada ação no índice e contando com informações sobre o setor, subsetor e nome da ação, os quais serão utilizadas em análises futuras.</p>
 </section>
 </section>
 <script type="text/x-thebe-config">
@@ -998,7 +1000,7 @@ memory usage: 5.6+ KB
 <i class="fa-solid fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
-<p class="prev-next-title">Fintechs</p>
+<p class="prev-next-title"><em>Fintechs</em></p>
 </div>
 </a>
 <a class="right-next" href="C%C3%A1lculo_do_VaR_de_uma_Carteira_de_Investimentos.html" title="next page">
